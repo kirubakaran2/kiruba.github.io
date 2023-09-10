@@ -1,0 +1,246 @@
+/* Reset some default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a general style to the whole page */
+body {
+  font-family: 'Jost', sans-serif;
+  background-color: #fff;
+  color: #333;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Style for the first section */
+#page1 {
+  width: 100%;
+  height: 100vh; /* Adjust the height based on screen ratio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Center text style */
+/* Center text style */
+#center-text {
+  font-family: 'Rubik 80s Fade', cursive;    
+  font-size: 71px; /* Converted from 4.5rem */
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0; /* Removed margin */
+  position: absolute;
+  bottom: 50%; /* Vertically align in the center */
+  transform: translateY(50%);
+  overflow: hidden; /* Hide the overflow to create the typing effect */
+  white-space: nowrap; /* Keep text on a single line */
+  width: 0; /* Initially, the text is hidden */
+  animation: typing 5s steps(30) forwards;
+}
+@media (max-width: 768px) {
+  #center-text {
+    white-space: normal; /* Allow text to wrap to the next line */
+    font-size: 71px;
+    text-align: center; /* Center-align the text */
+    bottom: 45%; /* Reset vertical alignment */
+    transform: none; /* Reset transform */
+    width: 100%; /* Allow text to take full width on smaller screens */
+    animation: typing 5s steps(30) forwards; /* Remove the typing animation on smaller screens */
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Fully display the text */
+  }
+}
+
+/* Center paragraph style */
+#center-para {
+  font-size: 19px; /* Converted from 1.2rem */
+  color: #fff;
+  text-align: center;
+  font-family: 'Lancelot', cursive;  max-width: 70%;
+  bottom: 37%;
+  transform: translateY(-20%);
+  position:relative;
+}
+
+/* Scroll indicator style */
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+#scroll {
+  position: absolute;
+  bottom: 15px; /* Adjusted from 5% */
+  left: 50%;
+  transform: translateX(-50%); /* Adjusted from -50% */
+  font-size: 15px;
+  color: white;
+  font-family: 'Jost', sans-serif; /* Load the Montserrat font from Google Fonts */
+  cursor: pointer; 
+  animation: blink 5s 5;
+}
+
+/* Style for the particles container */
+#particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Place the particles behind the content */
+}
+
+/* Style for the second section with red background */
+#page2 {
+  width: 100%;
+  height: calc(100vh); /* Adjust the height based on screen ratio */
+  background: #11e8bb; /* Old browsers */
+  background: -moz-linear-gradient(top,  #11e8bb 0%, #8200c9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #11e8bb 0%,#8200c9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11e8bb', endColorstr='#8200c9',GradientType=0 ); /* IE6-9 */
+  overflow: hidden;
+}
+#webbuilders {
+text-align: center;
+
+    }
+.mobilepng {
+
+      align-items: center;
+}
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: 12px; /* Converted from .8em */
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 14px; /* Converted from 1.1em */
+}
+
+#stats, .count-particles {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.hidden-mobile {
+  display: none;
+}
+#page3 {
+  width: 100%;
+  height: calc(100vh); /* Adjust the height based on screen ratio */
+  background:#c9c9c9 ; 
+  overflow: hidden;
+  }
+.navcontentholder {
+  z-index: 100;
+  width: auto;
+  height: 55px;
+  max-width: 1000px;
+  min-width: 50vw;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(211,211,211,.34);
+  border: 2px solid rgba(125,125,125,.17);
+  border-radius: 999px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+  position: sticky;
+  top: 0%;
+  bottom: 0%;
+  left: 20%;
+  right: 0%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .navcontentholder {
+    z-index: 40;
+    width: auto;
+    height: 55px;
+    max-width: 1000px;
+    min-width: 50vw;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(211,211,211,.34);
+    border: 2px solid rgba(125,125,125,.17);
+    border-radius: 999px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    position:relative;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    align-items: center; /* Center items horizontally for smaller screens */
+    text-align: center; /* Center text for smaller screens */
+    padding: 10px; /* Add padding for better spacing */
+  }
+}
+.navcontentholder .navlinktext {
+  transition: color 0.3s ease-in-out; /* Add a color transition animation */
+}
+
+/* Change the text color when hovered */
+.navcontentholder .navlinktext:hover {
+  color: blueviolet; /* New text color when hovered */
+}
+.navlinktext {
+  color: #1a1a1a;
+  margin-right: 30px;
+  font-family: Lato,sans-serif;
+  font-weight: 400;
+  transition: all .3s;
+}
+.image-nav {
+  width: 50px;
+  height: 50px;
+  transition: all .3s;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: all;
+}
